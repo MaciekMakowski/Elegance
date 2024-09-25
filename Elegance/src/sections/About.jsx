@@ -13,7 +13,7 @@ const About = () => {
           <img
             src={AboutImage}
             alt="about"
-            className="w-[500px] h-[500px] object-cover border-gold border-2 inner-shadow"
+            className="w-full h-full md:w-[500px] md:h-[500px] object-cover border-gold border-2 inner-shadow"
           />
           <div className="inner-shadow absolute inset-0"></div>
         </div>

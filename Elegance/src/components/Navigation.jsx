@@ -12,8 +12,8 @@ const Navigation = () => {
   return (
     <nav className="bg-black flex justify-between px-8 py-2 items-center fixed w-full z-40">
       <div className="flex items-center gap-4">
-        <h5 className="text-white font-primary text-3xl font-semibold">
-          EL<span className="text-primary text-xl">EGANCE</span>
+        <h5 className="text-white font-primary text-4xl font-semibold">
+          EL<span className="text-primary text-2xl">EGANCE</span>
         </h5>
         <Logo className="h-8 w-8" />
       </div>

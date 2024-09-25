@@ -1,10 +1,11 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Cleaning from "../images/cleaning.png";
 import Polishing from "../images/polishing.png";
 import Renewal from "../images/renewal.png";
 import Restoration from "../images/restoration.png";
 import Vacuuming from "../images/vacuuming.png";
 import Washing from "../images/washing.png";
-
 const services = [
   {
     title: "Polerowanie",
@@ -33,6 +34,9 @@ const services = [
 ];
 
 const Offer = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
   return (
     <section className="relative py-[120px] bg-dark overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-full">
@@ -44,7 +48,13 @@ const Offer = () => {
         <h2 className="text-center font-primary text-6xl text-white">
           Nasza oferta
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-[1450px] justify-items-center w-full">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }}
+          transition={{ duration: 1 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-[1450px] justify-items-center w-full px-4 md:px-0"
+        >
           {services.map((service, index) => (
             <div
               key={index}
@@ -62,7 +72,7 @@ const Offer = () => {
               </h3>
             </div>
           ))}
-        </div>
+        </motion.div>
       </article>
       <div className="w-full flex justify-center mt-24">
         <a className="px-6 py-2 rounded-md w-fit font-primary bg-white text-2xl cursor-pointer animated-button whitespace-nowrap min-w-fit">

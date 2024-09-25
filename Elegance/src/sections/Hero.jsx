@@ -14,11 +14,9 @@ const Hero = () => {
 
   return (
     <section
-      className="md:h-[100vh] w-full bg-dark overflow-hidden flex flex-col md:flex-row gap-8 md:gap-0 justify-center pb-24 md:pb-0"
+      className="md:h-[100vh] w-full bg-dark overflow-hidden flex flex-col md:flex-row gap-8 md:gap-0 justify-center pb-24 md:pb-0 md:bg-cover"
       style={{
         backgroundImage: `url(${HeroImage})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
       }}
     >
       <article className="pt-[300px] md:w-[1450px] flex flex-col justify-between px-4 xl:px-0 gap-8 md:gap-0">
