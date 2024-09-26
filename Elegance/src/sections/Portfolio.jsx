@@ -56,8 +56,8 @@ const Portfolio = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               src={item.image}
-              alt="Image of sports car after detailning"
-              className="w-full h-full object-cover"
+              alt="Image of sports car after detailing"
+              className="w-full h-full object-cover transform origin-center"
             />
             <h5 className="text-white font-primary text-3xl absolute bottom-2 left-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               {item.title}
