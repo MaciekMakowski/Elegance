@@ -1,3 +1,6 @@
+import emailjs from "emailjs-com";
+import React, { useRef, useState } from "react";
+import { toast } from "react-toastify";
 import Email from "../icons/email.svg?react";
 import Location from "../icons/location.svg?react";
 import Phone from "../icons/phone.svg?react";
@@ -5,33 +8,110 @@ import Contact1 from "../images/contact1.png";
 import Contact2 from "../images/contact2.png";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isGDPRChecked, setIsGDPRChecked] = useState(false);
+  const form = useRef(null);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleGDPRChange = () => {
+    setIsGDPRChecked(!isGDPRChecked);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    )
+      return toast.error("Wypełnij wszystkie pola formularza!");
+
+    if (!isGDPRChecked)
+      return toast.error(
+        "Musisz wyrazić zgodę na przetwarzanie danych osobowych!"
+      );
+    const templateParams = {
+      user_name: formData.name,
+      user_email: formData.email,
+      user_phone: formData.phone,
+      user_message: formData.message,
+    };
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          toast.success("Wiadomość została wysłana pomyślnie!");
+          setFormData({ name: "", email: "", phone: "", message: "" });
+          setIsGDPRChecked(false);
+        },
+        (err) => {
+          toast.error("Wystąpił błąd podczas wysyłania wiadomości!");
+        }
+      );
+  };
+
   return (
     <section className="bg-dark w-full flex flex-col">
       <div className="flex flex-col-reverse md:flex-row w-full">
         <div className="w-full md:w-1/2 flex flex-col px-8 py-16">
           <h4 className="font-primary text-4xl text-white">Kontakt</h4>
-          <form className="flex gap-4 flex-col w-full items-center">
+          <form
+            className="flex gap-4 flex-col w-full items-center"
+            onSubmit={sendEmail}
+            ref={form}
+          >
             <div className="flex gap-4 flex-col md:flex-row w-full">
               <div className="flex flex-col gap-4 w-full md:w-1/2 text-xl">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Imię"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="bg-gold px-4 py-4 text-white font-secondary inner-shadow-sm placeholder-black"
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="bg-gold px-4 py-4 text-white font-secondary inner-shadow-sm placeholder-black"
                 />
                 <input
                   type="text"
+                  name="phone"
                   placeholder="Numer telefonu"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="bg-gold px-4 py-4 text-white font-secondary inner-shadow-sm placeholder-black"
                 />
               </div>
               <div className="flex flex-col gap-4 w-full md:w-1/2 h-full">
                 <textarea
+                  name="message"
                   placeholder="Wiadomość"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="bg-gold px-4 py-4 h-full text-white font-secondary inner-shadow-sm placeholder-black"
                   rows={7}
                 ></textarea>
@@ -42,6 +122,8 @@ const Contact = () => {
                 type="checkbox"
                 id="gdpr"
                 name="gdpr"
+                checked={isGDPRChecked}
+                onChange={handleGDPRChange}
                 className="text-white w-4 h-4"
               />
               <label
@@ -58,7 +140,10 @@ const Contact = () => {
                 </a>
               </label>
             </div>
-            <button className="px-6 py-2 rounded-md w-fit font-primary bg-gold text-2xl cursor-pointer animated-button-white text-white whitespace-nowrap min-w-fit">
+            <button
+              type="submit" // Upewnij się, że jest to przycisk typu submit
+              className="px-6 py-2 rounded-md w-fit font-primary bg-gold text-2xl cursor-pointer animated-button-white text-white whitespace-nowrap min-w-fit"
+            >
               Wyślij zapytanie
             </button>
           </form>
