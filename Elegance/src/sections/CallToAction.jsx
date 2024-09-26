@@ -1,4 +1,4 @@
-import CtaBg from "../images/CtaBg.png";
+import CtaBg from "../images/ctaBg.png";
 const CallToAction = () => {
   return (
     <section
