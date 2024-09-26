@@ -5,6 +5,10 @@ import Clean from "../icons/clean-hand.svg?react";
 import Door from "../icons/doors.svg?react";
 import Engine from "../icons/engine-clean.svg?react";
 import Star from "../icons/star.svg?react";
+import Img1 from "../images/hero-content1.png";
+import Img2 from "../images/hero-content2.png";
+import Img3 from "../images/hero-content3.png";
+import Img4 from "../images/hero-content4.png";
 import HeroImage from "../images/hero.png";
 
 const Hero = () => {
@@ -37,56 +41,92 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-            className="bg-dark rounded-t-md pt-4 pb-16 px-8 gap-8 flex flex-col items-center w-full md:max-w-[300px] on-hover-border-gold cursor-pointer"
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.3 },
+            }}
+            style={{
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+            className="bg-dark relative rounded-t-md pt-4 pb-16 px-8 gap-8 flex flex-col items-center w-full md:max-w-[300px] overflow-hidden on-hover-border-gold cursor-pointer group"
           >
-            <Clean className="h-24 w-24 text-gold" />
-            <h5 className="font-primary text-white text-2xl text-center">
+            <img
+              src={Img1}
+              alt="hero"
+              className="h-full w-full opacity-0 absolute object-cover top-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+            <Clean className="h-24 w-24 text-gold z-10" />
+            <h5 className="font-primary text-white text-2xl text-center z-10">
               Odnawianie <br /> wnętrza
             </h5>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 1, delay: 0.5 },
+            animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.3 },
             }}
-            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-            className="bg-dark rounded-t-md pt-4 pb-16 px-8 gap-8 flex flex-col items-center w-full md:max-w-[300px] on-hover-border-gold cursor-pointer"
+            style={{
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+            className="bg-dark relative rounded-t-md pt-4 pb-16 px-8 gap-8 flex flex-col items-center w-full md:max-w-[300px] overflow-hidden on-hover-border-gold cursor-pointer group"
           >
-            <Door className="h-24 w-24 text-gold" />
-            <h5 className="font-primary text-white text-2xl text-center">
+            <img
+              src={Img2}
+              alt="hero"
+              className="h-full w-full opacity-0 absolute object-cover top-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+            <Door className="h-24 w-24 text-gold z-10" />
+            <h5 className="font-primary text-white text-2xl text-center z-10">
               Oklejanie <br /> okien
             </h5>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 1, delay: 1 },
+            animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.3 },
             }}
-            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-            className="bg-dark rounded-t-md pt-4 pb-16 px-8 gap-8 flex flex-col items-center w-full md:max-w-[300px] on-hover-border-gold cursor-pointer"
+            style={{
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+            className="bg-dark relative rounded-t-md pt-4 pb-16 px-8 gap-8 flex flex-col items-center w-full md:max-w-[300px] overflow-hidden on-hover-border-gold cursor-pointer group"
           >
-            <Car className="h-24 w-24 text-gold" />
-            <h5 className="font-primary text-white text-2xl text-center">
+            <img
+              src={Img3}
+              alt="hero"
+              className="h-full w-full opacity-0 absolute object-cover top-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+            <Car className="h-24 w-24 text-gold z-10" />
+            <h5 className="font-primary text-white text-2xl text-center z-10">
               Spersonalizowana <br /> Renowacja
             </h5>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 1, delay: 1.5 },
+            animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.3 },
             }}
-            whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-            className="bg-dark rounded-t-md pt-4 pb-16 px-8 gap-8 flex flex-col items-center w-full md:max-w-[300px] on-hover-border-gold cursor-pointer"
+            style={{
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+            className="bg-dark relative rounded-t-md pt-4 pb-16 px-8 gap-8 flex flex-col items-center w-full md:max-w-[300px] overflow-hidden on-hover-border-gold cursor-pointer group"
           >
-            <Engine className="h-24 w-24 text-gold" />
-            <h5 className="font-primary text-white text-2xl text-center">
+            <img
+              src={Img4}
+              alt="hero"
+              className="h-full w-full opacity-0 absolute object-cover top-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+            <Engine className="h-24 w-24 text-gold z-10" />
+            <h5 className="font-primary text-white text-2xl text-center z-10">
               Czyszczenie <br /> silnika
             </h5>
           </motion.div>
