@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Logo from "../icons/Logo.svg?react";
+import Logo from "../icons/logo.svg?react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
