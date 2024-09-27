@@ -74,11 +74,21 @@ const Navigation = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <div className="flex flex-col gap-4 font-primary text-xl">
-              <a className="cursor-pointer text-gold-hover">Strona główna</a>
-              <a className="cursor-pointer text-gold-hover">O nas</a>
-              <a className="cursor-pointer text-gold-hover">Usługi</a>
-              <a className="cursor-pointer text-gold-hover">Portfolio</a>
-              <a className="cursor-pointer text-gold-hover">Kontakt</a>
+              <a className="cursor-pointer text-gold-hover" href="#home">
+                Strona główna
+              </a>
+              <a className="cursor-pointer text-gold-hover" href="#about">
+                O nas
+              </a>
+              <a className="cursor-pointer text-gold-hover" href="#offer">
+                Usługi
+              </a>
+              <a className="cursor-pointer text-gold-hover" href="#portfolio">
+                Portfolio
+              </a>
+              <a className="cursor-pointer text-gold-hover" href="#contact">
+                Kontakt
+              </a>
             </div>
           </motion.div>
         </div>
