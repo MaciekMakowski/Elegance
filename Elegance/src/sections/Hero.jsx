@@ -36,7 +36,7 @@ const Hero = () => {
           </p>
           <a
             className="px-6 py-2 rounded-md font-primary bg-white w-fit text-2xl hover:shadow-inner cursor-pointer animated-button"
-            href="#home"
+            href="#whyUs"
           >
             Zadbaj o auto już dziś
           </a>

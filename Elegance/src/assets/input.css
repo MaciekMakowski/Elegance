@@ -9,6 +9,9 @@
   --font-primary: "Bebas Neue", system-ui, sans-serif;
   --font-secondary: "Playfair Display", system-ui, serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-secondary);
   background-color: var(--color-white);
