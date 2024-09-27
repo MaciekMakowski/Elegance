@@ -29,7 +29,7 @@ const services = [
 
 const Footer = () => {
   return (
-    <footer className="bg-dark py-[120px] flex justify-center">
+    <footer className="bg-dark py-[120px] flex justify-center" id="footer">
       <div className="flex w-full flex-col md:flex-row max-w-[1450px] justify-between items-center gap-8">
         <div className="flex flex-col justify-center">
           <Logo className="h-32 w-32" />

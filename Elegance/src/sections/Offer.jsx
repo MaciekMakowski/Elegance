@@ -38,7 +38,7 @@ const Offer = () => {
     threshold: 0.2,
   });
   return (
-    <section className="relative py-[120px] bg-dark overflow-hidden">
+    <section className="relative py-[120px] bg-dark overflow-hidden" id="offer">
       <div className="absolute top-0 left-0 right-0 h-full">
         <div className="w-full h-[80%] bg-gold absolute top-0 left-0 clip-triangle rotate-180"></div>
         <div className="w-[99%] h-[79%] bg-white absolute top-0 left-[0.5%] clip-triangle rotate-180"></div>
@@ -75,7 +75,10 @@ const Offer = () => {
         </motion.div>
       </article>
       <div className="w-full flex justify-center mt-24">
-        <a className="px-6 py-2 rounded-md w-fit font-primary bg-white text-2xl cursor-pointer animated-button whitespace-nowrap min-w-fit">
+        <a
+          className="px-6 py-2 rounded-md w-fit font-primary bg-white text-2xl cursor-pointer animated-button whitespace-nowrap min-w-fit"
+          href="#footer"
+        >
           Zobacz więcej
         </a>
       </div>

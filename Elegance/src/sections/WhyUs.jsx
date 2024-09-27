@@ -8,7 +8,10 @@ const WhyUs = () => {
     threshold: 0.1,
   });
   return (
-    <section className="bg-dark py-[120px] border-gold border-t-2 flex flex-col gap-8 items-center">
+    <section
+      className="bg-dark py-[120px] border-gold border-t-2 flex flex-col gap-8 items-center"
+      id="whyUs"
+    >
       <div className="text-white flex flex-col gap-4">
         <h2 className="text-center font-primary text-6xl ">Dlaczego my?</h2>
         <p className="text-center font-secondary text-xl">Czyli trzy razy P</p>

@@ -25,11 +25,21 @@ const Navigation = () => {
           className="border-gold"
         />
         <div className="flex gap-4 text-white font-primary text-xl">
-          <a className="cursor-pointer text-gold-hover">Strona główna</a>
-          <a className="cursor-pointer text-gold-hover">O nas</a>
-          <a className="cursor-pointer text-gold-hover">Usługi</a>
-          <a className="cursor-pointer text-gold-hover">Portfolio</a>
-          <a className="cursor-pointer text-gold-hover">Kontakt</a>
+          <a className="cursor-pointer text-gold-hover" href="#home">
+            Strona główna
+          </a>
+          <a className="cursor-pointer text-gold-hover" href="#about">
+            O nas
+          </a>
+          <a className="cursor-pointer text-gold-hover" href="#offer">
+            Usługi
+          </a>
+          <a className="cursor-pointer text-gold-hover" href="#portfolio">
+            Portfolio
+          </a>
+          <a className="cursor-pointer text-gold-hover" href="#contact">
+            Kontakt
+          </a>
         </div>
         <motion.hr
           initial={{ opacity: 0, width: 0 }}

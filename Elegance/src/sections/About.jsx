@@ -7,7 +7,10 @@ const About = () => {
     threshold: 0.1,
   });
   return (
-    <section className="py-[120px] bg-dark flex flex-col gap-[40px] items-center">
+    <section
+      className="py-[120px] bg-dark flex flex-col gap-[40px] items-center"
+      id="about"
+    >
       <article className="flex max-w-[1450px] justify-between flex-col md:flex-row items-center gap-8 md:gap-0">
         <div className="relative">
           <img
@@ -61,7 +64,10 @@ const About = () => {
             transition={{ duration: 1 }}
             className="border-gold"
           />
-          <a className="px-6 py-2 rounded-md w-fit font-primary bg-white text-2xl cursor-pointer animated-button whitespace-nowrap min-w-fit">
+          <a
+            className="px-6 py-2 rounded-md w-fit font-primary bg-white text-2xl cursor-pointer animated-button whitespace-nowrap min-w-fit"
+            href="#whyUs"
+          >
             Dowiedz się więcej
           </a>
           <motion.hr

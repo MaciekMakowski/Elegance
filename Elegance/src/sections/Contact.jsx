@@ -70,7 +70,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-dark w-full flex flex-col">
+    <section className="bg-dark w-full flex flex-col" id="contact">
       <div className="flex flex-col-reverse md:flex-row w-full">
         <div className="w-full md:w-1/2 flex flex-col px-8 py-16">
           <h4 className="font-primary text-4xl text-white">Kontakt</h4>
