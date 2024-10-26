@@ -890,6 +890,7 @@ body {
   font-family: var(--font-secondary);
   font-optical-sizing: auto;
   font-style: normal;
+  font-weight: 500;
 }
 .border-dark {
   border-color: var(--color-dark);
@@ -1058,6 +1059,11 @@ body {
   --tw-drop-shadow: drop-shadow(0 1.2px 1.2px rgba(0,0,0,0.8));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
+@media (min-width: 640px){
+  .sm\:gap-4{
+    gap: 1rem;
+  }
+}
 @media (min-width: 768px){
   .md\:flex{
     display: flex;
@@ -1127,6 +1133,9 @@ body {
 @media (min-width: 1024px){
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .lg\:gap-16{
+    gap: 4rem;
   }
   .lg\:px-0{
     padding-left: 0px;

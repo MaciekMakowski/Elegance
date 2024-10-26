@@ -106,16 +106,14 @@ const Contact = () => {
                   className="bg-gold px-4 py-4 text-white font-secondary inner-shadow-sm placeholder-black"
                 />
               </div>
-              <div className="flex flex-col gap-4 w-full md:w-1/2 h-full">
-                <textarea
-                  name="message"
-                  placeholder="Wiadomość"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="bg-gold px-4 py-4 h-full text-white font-secondary inner-shadow-sm placeholder-black"
-                  rows={7}
-                ></textarea>
-              </div>
+              <textarea
+                name="message"
+                placeholder="Wiadomość"
+                value={formData.message}
+                onChange={handleChange}
+                className="bg-gold px-4 py-4 text-white font-secondary inner-shadow-sm w-full md:w-1/2 placeholder-black"
+                rows={7}
+              ></textarea>
             </div>
             <div>
               <input

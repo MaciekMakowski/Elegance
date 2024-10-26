@@ -17,7 +17,7 @@ const WhyUs = () => {
         <p className="text-center font-secondary text-xl">Czyli trzy razy P</p>
       </div>
       <article
-        className="grid grid-cols-1 md:grid-cols-3 w-full max-w-[1450px] gap-16 md:gap-32 px-8 md:px-0"
+        className="grid grid-cols-1 md:grid-cols-3 w-full max-w-[1450px] gap-4 xs:gap-2 lg:gap-16 xl:32 px-8 md:px-0"
         ref={ref}
       >
         <motion.div
